@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Rizki Jack — Web3 Community Manager and Moderator from Banjarnegara, Indonesia. Grew a Discord community from 1,000 to 5,000+ members. Available for full-time remote night shifts." />
+<link rel="icon" href="data:," />
+<title>Rizki Jack — Web3 Community Manager &amp; Moderator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#fbfaf7;
+    --ink:#16150f;
+    --ink-2:#3d3a2e;
+    --muted:#6f6a5c;
+    --line:#16150f;
+    --hair:#d8d3c4;
+    --accent:#1d4d2b;
+    --accent-soft:#eef2ec;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+    font-size:17px;line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit}
+  ::selection{background:var(--accent);color:#fff}
+
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+
+  /* ---------- masthead ---------- */
+  .masthead{border-bottom:3px solid var(--line);padding:18px 0 14px}
+  .masthead .wrap{display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  .brand{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:22px;letter-spacing:.01em;text-decoration:none}
+  .brand span{font-style:italic;font-weight:500;color:var(--muted)}
+  nav{display:flex;gap:26px;flex-wrap:wrap}
+  nav a{font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--ink-2);padding-bottom:2px;border-bottom:2px solid transparent}
+  nav a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+  .dateline{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:9px 0;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--hair)}
+  .dot{display:inline-block;width:8px;height:8px;background:var(--accent);border-radius:50%;margin-right:7px;vertical-align:1px}
+  .avail{color:var(--accent);font-weight:600}
+
+  /* ---------- hero ---------- */
+  .hero{padding:72px 0 56px;border-bottom:1px solid var(--hair)}
+  .hero h1{font-family:"Fraunces",Georgia,serif;font-weight:500;font-size:clamp(52px,8.4vw,96px);line-height:1.02;letter-spacing:-.015em}
+  .hero h1 em{font-style:italic;font-weight:400}
+  .hero .role{margin-top:26px;font-size:19px;font-weight:600}
+  .hero .role span{color:var(--muted);font-weight:500}
+  .hero .lede{margin-top:18px;max-width:62ch;font-size:18px;line-height:1.7;color:var(--ink-2)}
+  .hero .lede strong{color:var(--ink)}
+  .actions{display:flex;gap:0;margin-top:34px;flex-wrap:wrap}
+  .actions a{display:inline-block;padding:13px 24px;font-size:14px;font-weight:600;text-decoration:none;border:1px solid var(--line)}
+  .actions a.primary{background:var(--ink);color:var(--paper)}
+  .actions a.primary:hover{background:var(--accent);border-color:var(--accent)}
+  .actions a.ghost:hover{border-color:var(--accent);color:var(--accent)}
+  .actions a + a{border-left:none}
+
+  .facts{margin-top:48px;border-top:1px solid var(--line)}
+  .facts .row{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--hair)}
+  .facts .cell{padding:20px 22px 18px 0}
+  .facts .cell + .cell{padding-left:22px;border-left:1px solid var(--hair)}
+  .facts .num{font-family:"Fraunces",Georgia,serif;font-size:34px;font-weight:500;line-height:1.1}
+  .facts .num small{font-size:22px}
+  .facts p{margin-top:6px;font-size:13.5px;line-height:1.5;color:var(--muted)}
+
+  /* ---------- sections ---------- */
+  section.block{padding:64px 0;border-bottom:1px solid var(--hair)}
+  .sec{display:grid;grid-template-columns:200px 1fr;gap:40px}
+  .sec-label{position:sticky;top:24px;align-self:start}
+  .sec-label .no{font-family:"Fraunces",Georgia,serif;font-size:15px;color:var(--accent);font-weight:600}
+  .sec-label h2{font-family:"Fraunces",Georgia,serif;font-weight:500;font-size:30px;line-height:1.15;margin-top:6px}
+  .sec-label .note{margin-top:12px;font-size:13.5px;line-height:1.55;color:var(--muted);max-width:24ch}
+  .sec-body > p.intro{font-size:18px;line-height:1.7;color:var(--ink-2);max-width:60ch}
+  .sec-body > p.intro strong{color:var(--ink)}
+
+  /* goal */
+  .goal-box{background:var(--accent-soft);border:1px solid var(--hair);border-left:4px solid var(--accent);padding:28px 30px}
+  .goal-box p{font-family:"Fraunces",Georgia,serif;font-size:clamp(21px,2.6vw,27px);line-height:1.45;font-weight:500}
+  .goal-box p em{font-style:italic}
+  .goal-box .goal-meta{margin-top:16px;font-family:"Inter",sans-serif;font-size:13.5px;color:var(--muted);letter-spacing:.04em}
+
+  /* experience */
+  .job-head{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:baseline}
+  .job-head h3{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:24px;line-height:1.25;max-width:34ch}
+  .job-head .where{font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+  .job-sub{margin-top:4px;font-size:14.5px;color:var(--muted)}
+  ol.duties{list-style:none;margin-top:22px;border-top:1px solid var(--line)}
+  ol.duties li{display:grid;grid-template-columns:34px 1fr;gap:8px;padding:15px 0;border-bottom:1px solid var(--hair);font-size:16px;line-height:1.6;color:var(--ink-2)}
+  ol.duties li .k{font-family:"Fraunces",Georgia,serif;color:var(--accent);font-weight:600}
+  ol.duties li strong{color:var(--ink)}
+
+  /* skills */
+  .skill-group{border-top:1px solid var(--line);padding:22px 0 8px}
+  .skill-group:first-of-type{margin-top:6px}
+  .skill-group h3{font-family:"Fraunces",Georgia,serif;font-size:20px;font-weight:600}
+  .skill-group .tag{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .skill-list{list-style:none;margin-top:14px}
+  .skill-list li{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--hair);font-size:15.5px}
+  .skill-list li:last-child{border-bottom:none}
+  .skill-list .core{font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--accent);text-transform:uppercase;white-space:nowrap;padding-top:3px}
+
+  /* how i work */
+  ol.steps{list-style:none;counter-reset:step;margin-top:6px}
+  ol.steps li{counter-increment:step;display:grid;grid-template-columns:56px 1fr;gap:12px;padding:22px 0;border-top:1px solid var(--hair)}
+  ol.steps li:last-child{border-bottom:1px solid var(--line)}
+  ol.steps li::before{content:counter(step,decimal-leading-zero);font-family:"Fraunces",Georgia,serif;font-size:26px;color:var(--accent);line-height:1.2}
+  ol.steps h3{font-family:"Fraunces",Georgia,serif;font-size:21px;font-weight:600}
+  ol.steps p{margin-top:6px;font-size:16px;line-height:1.65;color:var(--ink-2);max-width:58ch}
+
+  /* projects */
+  .project{padding:30px 0 34px;border-top:1px solid var(--line)}
+  .project:first-of-type{margin-top:6px}
+  .project:last-of-type{border-bottom:1px solid var(--line)}
+  .proj-grid{display:grid;grid-template-columns:200px 1fr;gap:32px}
+  .proj-meta .kind{font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .proj-meta h3{font-family:"Fraunces",Georgia,serif;font-size:26px;font-weight:600;line-height:1.2;margin-top:6px}
+  .proj-meta .year{margin-top:4px;font-size:13.5px;color:var(--muted)}
+  .proj-links{margin-top:16px;display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+  .proj-links a{font-size:14px;font-weight:600;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:1px}
+  .proj-links a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+  .proj-body p{font-size:16px;line-height:1.7;color:var(--ink-2);max-width:62ch}
+  .proj-body p + p{margin-top:14px}
+  .proj-body p strong{color:var(--ink)}
+
+  /* background */
+  .bg-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+  .bg-grid h3{font-family:"Fraunces",Georgia,serif;font-size:20px;font-weight:600;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:6px}
+  .edu-name{font-size:17px;font-weight:700;margin-top:14px}
+  .edu-sub{font-size:14.5px;color:var(--muted)}
+  .bg-grid p{margin-top:12px;font-size:15.5px;line-height:1.65;color:var(--ink-2)}
+  table.kv{width:100%;border-collapse:collapse;margin-top:8px}
+  table.kv td{padding:11px 0;border-bottom:1px solid var(--hair);font-size:15.5px;vertical-align:top}
+  table.kv td:last-child{text-align:right;font-weight:600;white-space:nowrap}
+  table.kv td:first-child{color:var(--ink-2)}
+  ul.avail-list{list-style:none;margin-top:8px}
+  ul.avail-list li{padding:11px 0 11px 22px;border-bottom:1px solid var(--hair);font-size:15.5px;line-height:1.6;color:var(--ink-2);position:relative}
+  ul.avail-list li::before{content:"";position:absolute;left:0;top:20px;width:9px;height:2px;background:var(--accent)}
+  ul.avail-list li strong{color:var(--ink)}
+  .loc{margin-top:16px;font-size:14px;color:var(--muted);line-height:1.6}
+
+  /* contact */
+  .contact h2{font-family:"Fraunces",Georgia,serif;font-weight:500;font-size:clamp(38px,5.4vw,60px);line-height:1.08;letter-spacing:-.01em;max-width:16ch}
+  .contact h2 em{font-style:italic;font-weight:400}
+  .contact .lede{margin-top:20px;font-size:17.5px;line-height:1.7;color:var(--ink-2);max-width:58ch}
+  .contact-table{margin-top:36px;border-top:1px solid var(--line)}
+  .contact-table .row{display:grid;grid-template-columns:170px 1fr auto;gap:16px;align-items:baseline;padding:15px 0;border-bottom:1px solid var(--hair)}
+  .contact-table .lbl{font-size:12.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+  .contact-table .val{font-size:16.5px;font-weight:600;word-break:break-word}
+  .contact-table .val a{text-decoration:none}
+  .contact-table .val a:hover{color:var(--accent)}
+  .contact-table .note{font-size:13px;color:var(--muted);white-space:nowrap}
+  .copy-btn{background:none;border:1px solid var(--hair);font:inherit;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);padding:6px 12px;cursor:pointer}
+  .copy-btn:hover{border-color:var(--accent);color:var(--accent)}
+  footer{padding:26px 0 40px}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+
+  @media (max-width:760px){
+    body{font-size:16px}
+    .wrap{padding:0 20px}
+    .hero{padding:48px 0 40px}
+    .sec{grid-template-columns:1fr;gap:18px}
+    .sec-label{position:static}
+    .sec-label .note{max-width:none}
+    section.block{padding:44px 0}
+    .facts .row{grid-template-columns:1fr 1fr}
+    .facts .cell{padding:16px 14px 14px 0}
+    .facts .cell:nth-child(3){padding-left:0;border-left:none}
+    .facts .cell:nth-child(even){padding-left:14px;border-left:1px solid var(--hair)}
+    .proj-grid{grid-template-columns:1fr;gap:12px}
+    .proj-links{flex-direction:row;gap:18px}
+    .bg-grid{grid-template-columns:1fr;gap:36px}
+    .contact-table .row{grid-template-columns:1fr;gap:2px}
+    .contact-table .note{white-space:normal}
+    nav{gap:16px}
+    .actions a{padding:12px 18px}
+  }
+</style>
+</head>
+<body id="top">
+<a href="#main" style="position:absolute;left:-9999px">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="#top">Rizki Jack <span>/ Portfolio</span></a>
+    <nav aria-label="Sections">
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#background">Background</a>
+      <a href="#contact">Hire me</a>
+    </nav>
+  </div>
+</header>
+<div class="wrap">
+  <div class="dateline">
+    <span><span class="dot"></span><span class="avail">Available now</span> — full-time remote, GMT+7</span>
+    <span>Banjarnegara, Central Java, Indonesia</span>
+  </div>
+</div>
+
+<main id="main">
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap">
+      <h1>Rizki Jack,<br><em>community kept<br>in order.</em></h1>
+      <p class="role">Web3 Community Manager and Moderator <span>/ Community Administrator</span></p>
+      <p class="lede">Web3 Community Administrator from Indonesia with hands-on experience managing and moderating Discord and Telegram communities. I grew a Discord community from <strong>1,000 to 5,000+ members within a few weeks</strong>, and I moderate daily, <strong>5,000+ members on Discord</strong> and <strong>2,000 on Telegram</strong>, keeping discussions active, orderly, and respectful. I also build websites, working with HTML, CSS, TypeScript, and Node.js — I coded a WordPress theme from scratch and tested it on a local install. Detail-oriented in administrative and data work, and available for remote evening and night shifts, including weekends.</p>
+      <div class="actions">
+        <a class="primary" href="mailto:rizkijack@rizkijack.pp.ua?subject=Community%20role%20Rizki%20Jack">Email me &rarr;</a>
+        <a class="ghost" href="assets/cv-rizki-jack.pdf">Download CV (PDF)</a>
+        <a class="ghost" href="https://www.linkedin.com/in/rizkijack">LinkedIn &nearr;</a>
+      </div>
+      <div class="facts" aria-label="Key numbers">
+        <div class="row">
+          <div class="cell"><div class="num">1,000 <small>&rarr;</small> 5,000+</div><p>Discord community growth achieved within a few weeks</p></div>
+          <div class="cell"><div class="num">5,000+</div><p>Discord members moderated daily, hands-on and manual</p></div>
+          <div class="cell"><div class="num">2,000</div><p>Telegram members moderated daily alongside Discord</p></div>
+          <div class="cell"><div class="num">GMT+7</div><p>Based in Indonesia. Nights, weekends and holidays</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN GOAL -->
+  <section class="block" id="goal">
+    <div class="wrap">
+      <div class="sec">
+        <div class="sec-label">
+          <div class="no">00</div>
+          <h2>Main goal</h2>
+          <p class="note">What I am looking for, stated plainly.</p>
+        </div>
+        <div class="sec-body">
+          <div class="goal-box">
+            <p>A full-time remote role as <em>Web3 Community Manager, Moderator, or Community Administrator</em> — on Discord and Telegram, night shifts from GMT+7.</p>
+            <p class="goal-meta">Text-based work is where I do my best work. Written English: strong. Spoken English: basic.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="block" id="experience">
+    <div class="wrap">
+      <div class="sec">
+        <div class="sec-label">
+          <div class="no">01</div>
+          <h2>Experience</h2>
+          <p class="note">Daily, hands-on moderation, no bots. Spam, scams, and phishing removed manually and quickly.</p>
+        </div>
+        <div class="sec-body">
+          <div class="job-head">
+            <h3>Community Administrator, Community Manager and Moderator</h3>
+            <span class="where">Remote / Web3</span>
+          </div>
+          <p class="job-sub">Various Web3.0 projects</p>
+          <ol class="duties">
+            <li><span class="k">a.</span><span>Grew a Discord community from <strong>1,000 to 5,000+ members within a few weeks</strong>.</span></li>
+            <li><span class="k">b.</span><span>Moderated online communities daily, <strong>5,000+ members on Discord</strong> and <strong>2,000 members on Telegram</strong>, keeping discussions active, orderly, and respectful.</span></li>
+            <li><span class="k">c.</span><span>Welcomed and onboarded new members, answered member questions, and conveyed project information accurately.</span></li>
+            <li><span class="k">d.</span><span>Removed spam, scams, and phishing links quickly through <strong>hands-on manual moderation with no bots</strong>.</span></li>
+            <li><span class="k">e.</span><span>Managed community member data, recording and regularly updating it, and coordinated with project teams online on targets and schedules requiring accuracy and consistency.</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="block" id="skills">
+    <div class="wrap">
+      <div class="sec">
+        <div class="sec-label">
+          <div class="no">02</div>
+          <h2>Skills</h2>
+          <p class="note">Community work on one side, careful administrative and technical work on the other.</p>
+        </div>
+        <div class="sec-body">
+          <div class="skill-group">
+            <div class="tag">Core practice</div>
+            <h3>Web3 and Community</h3>
+            <ul class="skill-list">
+              <li><span><strong>Discord</strong> — community moderation and management</span><span class="core">Core</span></li>
+              <li><span><strong>Telegram</strong> — community moderation and management</span><span class="core">Core</span></li>
+              <li><span>Community growth and member engagement</span><span class="core">Core</span></li>
+              <li><span>New member welcoming and onboarding</span></li>
+              <li><span>Spam, scam and phishing removal</span></li>
+              <li><span>Hands-on manual moderation, no bots</span></li>
+              <li><span>Online community administration and data management</span></li>
+              <li><span>Crypto wallets and blockchain</span></li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <div class="tag">Core practice</div>
+            <h3>Website &amp; Development</h3>
+            <ul class="skill-list">
+              <li><span><strong>Website design</strong></span><span class="core">Core</span></li>
+              <li><span>Front-end development — HTML, CSS, TypeScript (basic)</span></li>
+              <li><span>Node.js (basic)</span></li>
+              <li><span>WordPress theme development</span></li>
+              <li><span>PHP</span></li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <div class="tag">Supporting work</div>
+            <h3>Administration and Technical</h3>
+            <ul class="skill-list">
+              <li><span><strong>Online data entry</strong> and management</span><span class="core">Core</span></li>
+              <li><span>Microsoft Excel and Google Sheets (familiar)</span></li>
+              <li><span>Chrome / Edge browser for administrative work</span></li>
+              <li><span>Computer and networking fundamentals</span></li>
+              <li><span>Beginner-level coding / programming (JavaScript, Python)</span></li>
+              <li><span>Data double-checking to maintain accuracy</span></li>
+              <li><span>Online written communication</span></li>
+              <li><span>Time management and remote work discipline</span></li>
+              <li><span>Customer support via chat</span></li>
+              <li><span>X (Twitter) posting and engagement</span></li>
+              <li><span>Blog, article, and social media writing</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW I WORK -->
+  <section class="block" id="approach">
+    <div class="wrap">
+      <div class="sec">
+        <div class="sec-label">
+          <div class="no">03</div>
+          <h2>How I work</h2>
+          <p class="note">Three habits that have not changed since the first community.</p>
+        </div>
+        <div class="sec-body">
+          <ol class="steps">
+            <li>
+              <div><h3>Manual, not automated</h3>
+              <p>Moderation is done by hand, every day. Spam, scams, and phishing links are caught and removed quickly, without relying on bots.</p></div>
+            </li>
+            <li>
+              <div><h3>Accurate information</h3>
+              <p>New members are welcomed and onboarded properly, questions get answered, and project information is passed on accurately, never guessed.</p></div>
+            </li>
+            <li>
+              <div><h3>Data kept in order</h3>
+              <p>Member data is recorded and updated regularly, and work is double-checked for accuracy and consistency across targets and schedules.</p></div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="block" id="projects">
+    <div class="wrap">
+      <div class="sec">
+        <div class="sec-label">
+          <div class="no">04</div>
+          <h2>Projects</h2>
+          <p class="note">Three builds outside the day job, each with a live surface and a public source repo.</p>
+        </div>
+        <div class="sec-body">
+          <article class="project">
+            <div class="proj-grid">
+              <div class="proj-meta">
+                <div class="kind">Multi-agent world</div>
+                <h3>SlopAgentbook</h3>
+                <div class="year">2026</div>
+                <div class="proj-links">
+                  <a href="https://github.com/Rizkijack/slopagentbook">Source &nearr;</a>
+                  <a href="https://slopagentbook.vercel.app/">Live town &nearr;</a>
+                </div>
+              </div>
+              <div class="proj-body">
+                <p>The town runs on the server. Every resident, called The Shorn, is a pixel livestock agent with a nine-segment DNA that draws its sprite. Fork one and the child inherits that DNA with measured mutations. Decisions come from a rule table in simbrain.ts covering survive, drink, eat, seek company, wander, take a quest and head to a named building. Nothing leaves the process, so a decision costs nothing and cannot fail on a quota. Another brain can be injected through createBrain, and if it throws, the rule table takes over.</p>
+                <p>Residents keep memory and relationships, so they can quote back what they remember about you. The Daily Spit, the in-world newspaper, publishes on a schedule. BRAWL sits above the town as a Solana Mainnet trading rail with scoped wallets, a leash for per-trade limits and stop-loss or take-profit, pay-on-profit settlement, a ledger and hiscores. There is no token mint or on-chain reserve behind the treasury figures. Those come from /api/treasury as an illustrative balance.</p>
+                <p>The stack is a pnpm workspace with an Express and TypeScript backend, a React and Vite hash-routed frontend, shared TypeScript contracts, an MCP server and server-sent events for the live snapshot. Persistence is data/town.json locally, and Postgres with Supabase primary plus a Prisma standby when DATABASE_URL is set.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="proj-grid">
+              <div class="proj-meta">
+                <div class="kind">Web stack analysis</div>
+                <h3>Reascan</h3>
+                <div class="year">2026</div>
+                <div class="proj-links">
+                  <a href="https://reascan.pages.dev/">Live site &nearr;</a>
+                  <a href="https://github.com/Rizkijack/reascan">GitHub repository &nearr;</a>
+                </div>
+              </div>
+              <div class="proj-body">
+                <p>Paste a URL into Reascan and it returns an evidence-standard report instead of a score. The sample on the landing page shows a fingerprint table with columns for key, value, type and confidence. It lists the server as nginx/1.25.3 with observation and high confidence, the CDN as Cloudflare with observation and high, and the framework as Next.js 14.2.3 with derivation and medium. Limitations and unknowns stay in the report.</p>
+                <p>The request travels through five hops: the browser, a Pages Function at the edge, a Cloudflare Tunnel, an adapter server on the VM, and the analysis modules. Findings cover web stack fingerprinting, JavaScript bundles, browser capture and deeper analysis, all rendered on one page. The frontend is on Cloudflare Pages while the analysis runs on a private VM, which keeps the heavy work off the edge.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="proj-grid">
+              <div class="proj-meta">
+                <div class="kind">AI chat</div>
+                <h3>Echo</h3>
+                <div class="year">2026</div>
+                <div class="proj-links">
+                  <a href="https://echo.0xjustshrimp.workers.dev/">Live site &nearr;</a>
+                  <a href="https://github.com/Rizkijack/echo">GitHub repository &nearr;</a>
+                </div>
+              </div>
+              <div class="proj-body">
+                <p>Echo is an AI chat with a procedural midnight city behind it. The city draws itself building by building, and the camera moves only when you scroll, so it waits for you instead of performing. You talk to Beam, Reflection&rsquo;s open 501B model, in one continuous conversation. Its thinking stays in collapsible blocks, which lets you read the reasoning next to the answer.</p>
+                <p>Every day starts with two free credits. More come from top-ups on Base with USDC or on Robinhood Chain with USDG, verified on-chain with no middleman. The app runs in six languages on one model. Underneath, a single-file public/index.html handles the interface with no build step, and a Cloudflare Worker proxies POST /api/chat to Reflection using Beam-1.0-501B-A23B. The provider key lives only in the Worker secret. If the proxy is down, the page falls back to built-in simulated replies.</p>
+                <p>The dashboard keeps account summary, usage per model, credits, backups and settings on one page. API keys are created there in the dashboard, stored in KV and shown in full once at creation, with a maximum of ten per wallet. The OpenAI-compatible endpoint accepts streaming and non-streaming requests, and CORS is open so browser clients can call it directly.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BACKGROUND -->
+  <section class="block" id="background">
+    <div class="wrap">
+      <div class="sec">
+        <div class="sec-label">
+          <div class="no">05</div>
+          <h2>Background and availability</h2>
+          <p class="note">Education, languages, and when I can work.</p>
+        </div>
+        <div class="sec-body">
+          <div class="bg-grid">
+            <div>
+              <h3>Education</h3>
+              <p class="edu-name">SMKS 1 Cokroaminoto</p>
+              <p class="edu-sub">Computer and Network Engineering</p>
+              <p>Background in computer and networking fundamentals, the technical base behind the administration and beginner coding skills above.</p>
+              <h3 style="margin-top:32px">Languages</h3>
+              <table class="kv">
+                <tr><td>Indonesian</td><td>Native / Active</td></tr>
+                <tr><td>English, Written</td><td>Strong</td></tr>
+                <tr><td>English, Spoken</td><td>Basic</td></tr>
+              </table>
+              <p>Strongest in written, text-based work, including chat moderation, tickets, and written community communication.</p>
+            </div>
+            <div>
+              <h3>Availability</h3>
+              <ul class="avail-list">
+                <li>Available to work <strong>full-time remotely and from home</strong></li>
+                <li>Willing to work <strong>night shifts consistently</strong>, based in GMT+7, Indonesia</li>
+                <li>Willing to work on <strong>weekends and public holidays</strong> if required</li>
+                <li>Available for remote <strong>evening and night shifts</strong></li>
+                <li>Best fit: text-based roles, Discord and Telegram moderation, community administration, data entry and admin support</li>
+              </ul>
+              <p class="loc"><strong>Location:</strong> Banjarnegara, Central Java, Indonesia (GMT+7). Working remotely for teams worldwide.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="block contact" id="contact" style="border-bottom:none">
+    <div class="wrap">
+      <div class="sec">
+        <div class="sec-label">
+          <div class="no">06</div>
+          <h2>Hire me</h2>
+          <p class="note">The fastest way to reach me is email.</p>
+        </div>
+        <div class="sec-body">
+          <h2 style="font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:clamp(38px,5.4vw,60px);line-height:1.08;letter-spacing:-.01em;max-width:16ch">What I can do for you.</h2>
+          <p class="lede" style="margin-top:20px;font-size:17.5px;line-height:1.7;color:var(--ink-2);max-width:58ch">I work full-time remotely from GMT+7, including night shifts, weekends, and public holidays. Written communication is my strength, so text-based work is where I do my best work.</p>
+          <p style="margin-top:14px;font-size:17px;line-height:1.65;color:var(--ink-2);max-width:58ch"><strong>Community management and moderation</strong> — Discord and Telegram, daily, by hand, no bots.</p>
+          <p style="margin-top:8px;font-size:17px;line-height:1.65;color:var(--ink-2);max-width:58ch"><strong>Website design and development</strong> — HTML, CSS, TypeScript, Node.js, and WordPress themes.</p>
+          <p style="margin-top:8px;font-size:17px;line-height:1.65;color:var(--ink-2);max-width:58ch"><strong>Administration and data</strong> — data entry, spreadsheets, and customer support via chat.</p>
+          <div class="contact-table">
+            <div class="row">
+              <span class="lbl">Email</span>
+              <span class="val"><a href="mailto:rizkijack@rizkijack.pp.ua">rizkijack@rizkijack.pp.ua</a></span>
+              <span class="note">Primary &nbsp;<button class="copy-btn" data-copy="rizkijack@rizkijack.pp.ua">Copy email</button></span>
+            </div>
+            <div class="row">
+              <span class="lbl">Email alt</span>
+              <span class="val"><a href="mailto:rizkiofficial666@gmail.com">rizkiofficial666@gmail.com</a></span>
+              <span class="note">Alternative</span>
+            </div>
+            <div class="row">
+              <span class="lbl">Phone</span>
+              <span class="val"><a href="tel:+6281228457705">0812 2845 7705</a></span>
+              <span class="note">Phone / WhatsApp &nbsp;<button class="copy-btn" data-copy="081228457705">Copy phone</button></span>
+            </div>
+            <div class="row">
+              <span class="lbl">LinkedIn</span>
+              <span class="val"><a href="https://www.linkedin.com/in/rizkijack">linkedin.com/in/rizkijack</a></span>
+              <span class="note">&nearr;</span>
+            </div>
+            <div class="row">
+              <span class="lbl">X</span>
+              <span class="val"><a href="https://x.com/0xJustshrimp">@0xJustshrimp</a></span>
+              <span class="note">&nearr;</span>
+            </div>
+            <div class="row">
+              <span class="lbl">GitHub</span>
+              <span class="val"><a href="https://github.com/Rizkijack">github.com/Rizkijack</a></span>
+              <span class="note">&nearr;</span>
+            </div>
+          </div>
+          <div class="actions" style="margin-top:30px">
+            <a class="primary" href="mailto:rizkijack@rizkijack.pp.ua?subject=Community%20role%20Rizki%20Jack">Email me &rarr;</a>
+            <a class="ghost" href="assets/cv-rizki-jack.pdf">Download CV (PDF)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Rizki Jack / Banjarnegara, Indonesia (GMT+7)</span>
+    <span><a href="#top" style="text-decoration:none">Back to top &uarr;</a></span>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.copy-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var text = btn.getAttribute('data-copy');
+    var done = function(){ var old = btn.textContent; btn.textContent = 'Copied'; setTimeout(function(){ btn.textContent = old; }, 1600); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, function(){ fallback(); });
+    } else { fallback(); }
+    function fallback(){
+      var ta = document.createElement('textarea');
+      ta.value = text; document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); done(); } catch(e){}
+      document.body.removeChild(ta);
+    }
+  });
+});
+</script>
+</body>
+</html>

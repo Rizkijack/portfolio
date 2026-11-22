@@ -48,10 +48,8 @@
 
   /* ---------- hero ---------- */
   .hero{padding:72px 0 56px;border-bottom:1px solid var(--hair)}
-  .hero .wrap{display:grid;grid-template-columns:248px 1fr;gap:52px;align-items:start}
-  .hero-photo{margin:0}
-  .hero-photo img{display:block;width:100%;border:1px solid var(--line)}
-  .hero .facts{grid-column:1 / -1}
+  .hero-title{display:flex;gap:24px;align-items:flex-start}
+  .hero-title img{display:block;flex:none;width:180px;border:1px solid var(--line)}
   .hero h1{font-family:"Fraunces",Georgia,serif;font-weight:500;font-size:clamp(52px,8.4vw,96px);line-height:1.02;letter-spacing:-.015em}
   .hero h1 em{font-style:italic;font-weight:400}
   .hero .role{margin-top:26px;font-size:19px;font-weight:600}
@@ -168,8 +166,8 @@
     body{font-size:16px}
     .wrap{padding:0 20px}
     .hero{padding:48px 0 40px}
-    .hero .wrap{grid-template-columns:1fr;gap:24px}
-    .hero-photo{width:168px}
+    .hero-title{gap:16px}
+    .hero-title img{width:120px}
     .sec{grid-template-columns:1fr;gap:18px}
     .sec-label{position:static}
     .sec-label .note{max-width:none}
@@ -214,16 +212,16 @@
   <!-- HERO -->
   <div class="hero">
     <div class="wrap">
-      <figure class="hero-photo"><img src="assets/profile.jpg" alt="Rizki Jack" width="400" height="400"></figure>
-      <div class="hero-text">
+      <div class="hero-title">
+      <img src="assets/profile.jpg" alt="Rizki Jack" width="336" height="336">
       <h1>Rizki Jack,<br><em>community kept<br>in order.</em></h1>
+      </div>
       <p class="role">Web3 Community Manager and Moderator <span>/ Community Administrator</span></p>
       <p class="lede">Web3 Community Administrator from Indonesia with hands-on experience managing and moderating Discord and Telegram communities. I grew a Discord community from <strong>1,000 to 5,000+ members within a few weeks</strong>, and I moderate daily, <strong>5,000+ members on Discord</strong> and <strong>2,000 on Telegram</strong>, keeping discussions active, orderly, and respectful. I also build websites, working with HTML, CSS, TypeScript, and Node.js — I coded a WordPress theme from scratch and tested it on a local install. Detail-oriented in administrative and data work, and available for remote evening and night shifts, including weekends.</p>
       <div class="actions">
         <a class="primary" href="mailto:rizkijack@rizkijack.pp.ua?subject=Community%20role%20Rizki%20Jack">Email me &rarr;</a>
         <a class="ghost" href="assets/cv-rizki-jack.pdf">Download CV (PDF)</a>
         <a class="ghost" href="https://www.linkedin.com/in/rizkijack">LinkedIn &nearr;</a>
-      </div>
       </div>
       <div class="facts" aria-label="Key numbers">
         <div class="row">
